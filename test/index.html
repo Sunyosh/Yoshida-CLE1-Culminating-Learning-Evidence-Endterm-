@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyecandy Design Links</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:active {
+      color: #000000;
+    }
+
+    nav a:hover {
+      color: #ffd700; 
+    }
+
+    canvas {
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="css.html">CSS</a>
+    <a href="svg.html">SVG</a>
+    <a href="canvas.html">Canvas</a>
+    <a href="about.html">About the Author</a>
+  </nav>
+  <canvas id="animationCanvas" width="300" height="300"></canvas>
+  <script>
+    const canvas = document.getElementById("animationCanvas");
+    const ctx = canvas.getContext("2d");
+    const text = "I Love World Peace! I Love World Peace";
+    const radius = 100;
+    let angle = 0;
+
+    function drawText() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.save();
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+
+      ctx.rotate(angle);
+
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const charAngle = (i / text.length) * (2 * Math.PI);
+        const x = radius * Math.cos(charAngle);
+        const y = radius * Math.sin(charAngle);
+
+        
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, 'black');
+        gradient.addColorStop(1, 'white');
+        ctx.fillStyle = gradient;
+
+        ctx.fillText(char, x, y);
+      }
+
+      ctx.restore();
+      angle -= 0.01; // Rotate counterclockwise
+      requestAnimationFrame(drawText);
+    }
+
+    ctx.font = "14px Arial";
+    drawText();
+  </script>
+</body>
+</html>

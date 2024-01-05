@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scaling Shape</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #3498db;
+      overflow: hidden;
+    }
+
+    .box {
+      width: 40px;
+      height: 40px;
+      background-color: blue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: scaleAnimation 4s linear infinite; 
+    }
+
+    @keyframes scaleAnimation {
+      0% {
+        transform: scale(1, 1);
+      }
+      20% {
+        transform: scale(1, 2);
+      }
+      40% {
+        transform: scale(1, 4);
+      }
+      60% {
+        transform: scale(2, 1);
+      }
+      80% {
+        transform: scale(2, 2);
+      }
+      100% {
+        transform: scale(4, 4);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Yoshida</div>
+</body>
+</html>

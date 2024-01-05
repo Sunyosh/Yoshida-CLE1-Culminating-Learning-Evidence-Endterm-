@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyecandy Design Links</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700; 
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 20px;
+    }
+
+    .left-tile,
+    .right-tile {
+      width: 45%;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .word-image {
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      background: linear-gradient(transparent 70%, rgba(52, 152, 219, 0.9) 0%);
+      border-radius: 8px;
+      padding: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="css.html">CSS</a>
+    <a href="svg.html">SVG</a>
+    <a href="canvas.html">Canvas</a>
+    <a href="about.html">About the Author</a>
+  </nav>
+
+  <div class="about-me">
+    <div class="left-tile">
+      <h2>About Me</h2>
+      <p>Name: Hidetaka Yoshida</p>
+      <p>Date of Birth: August 22, 2002</p>
+      <p>Address: Silay City</p>
+      <p>Contact Number: Unavailable</p>
+    </div>
+
+    <div class="right-tile">
+      <div class="word-image">NO PHOTO AVAILABLE</div>
+    </div>
+  </div>
+</body>
+</html>

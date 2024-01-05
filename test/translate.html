@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translate Shape</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #3498db;
+      overflow: hidden;
+    }
+
+    .box {
+      width: 40px;
+      height: 40px;
+      background-color: blue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: translateAnimation 4s linear infinite; 
+    }
+
+    @keyframes translateAnimation {
+      0% {
+        transform: translate(10px, 30px);
+      }
+      25% {
+        transform: translate(20px, 60px);
+      }
+      50% {
+        transform: translate(30px, 90px);
+      }
+      75% {
+        transform: translate(40px, 120px);
+      }
+      100% {
+        transform: translate(50px, 150px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Yoshida</div>
+</body>
+</html>

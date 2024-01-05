@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyecandy Design Links</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700; 
+    }
+
+    
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+    }
+
+    @media screen and (orientation: landscape) {
+      svg {
+        max-width: 80vw;
+        max-height: 80vh;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      svg {
+        max-width: 60vw;
+        max-height: 60vh;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      svg {
+        max-width: 50vw;
+        max-height: 50vh;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="css.html">CSS</a>
+    <a href="svg.html">SVG</a>
+    <a href="canvas.html">Canvas</a>
+    <a href="about.html">About the Author</a>
+  </nav>
+
+  
+  <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <path id="dropPath" d="M400 600 C100 350 100 750 400 600 Z" stroke="none" fill="transparent" stroke-width="2" transform="scale(2.0) translate(-340, -240) rotate(250, 390, 390)"/> 
+    <text font-family="Arial" font-size="3vw" fill="#00cccc" text-anchor="middle" x="50%" y="50%">
+      <textPath xlink:href="#dropPath" startOffset="0%">
+        Every water drop on a leaf is a tiny reminder that even the smallest things can hold great beauty and importance.
+      </textPath>
+    </text>
+  </svg>
+</body>
+</html>
